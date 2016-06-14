@@ -1,0 +1,19 @@
+<ion-popover-view class="send-receive-popover">
+    <ion-content class="padding">
+        <div class="list">
+            <div class="item item-divider">
+                <span>Recent</span>
+            </div>
+            <a class="item" ng-repeat="contact in contacts | limitTo : 3">
+                {{contact.email}}
+            </a>
+            <div class="item item-divider">
+                <span>Contacts</span>
+            </div>
+            <a class="item item-avatar" ng-repeat="contact in contacts">
+                <img src="../img/avatar.jpg" alt="">
+                {{contact.email}}
+            </a>
+        </div>
+    </ion-content>
+</ion-popover-view>

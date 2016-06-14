@@ -1,0 +1,59 @@
+<ion-view view-title="Balance: 3,035.00" class="dash-receive-view">
+    <ion-nav-bar class="bar-light dash-receive-nav-bar">
+        <ion-nav-buttons side="left">
+            <button class="button button-clear button-icon icon ion-navicon" ng-click="toggleLeft()"></button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <a href="#/dash" class="button button-clear button-icon ion-close"></a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="padding">
+
+        <div class="send-receive-cont">
+            <!--<form action="#">-->
+
+            <div class="card send-receive-input ">
+                <div ng-show="!showContactInput" class="contacts-cont" compile="contactItem"></div>
+                <label class="item item-icon-left item-icon-right item-input">
+                    <i class="icon add-person-icon"></i>
+                    <input ng-show="showContactInput" ng-focus="showContacts = true" ng-blur="showContacts = false" class="contact-input" type="text" ng-model="addContactInput.email" ng-init="addContactInput.email = ''">
+                    <i class="icon qr-code-icon"></i>
+                </label>
+            </div>
+            <div class="send-receive-popover" ng-show="showContacts">
+                <div class="list contacts-list">
+                    <div class="recent-contacts" ng-hide="addContactInput.email != ''">
+                        <div class="item item-divider">
+                            <span>Recent</span>
+                        </div>
+                        <a class="item" ng-click="addContact('{{contact.email}}')" ng-repeat="contact in contacts | limitTo : 3">
+                            {{contact.email}}
+                        </a>
+                        <div class="item item-divider">
+                            <span>Contacts</span>
+                        </div>
+                    </div>
+                    <a class="item item-avatar" ng-click="addContact('{{contact.email}}')"  ng-repeat="contact in contacts | filter : addContactInput">
+                        <img src="../img/avatar.jpg" alt="">
+                        {{contact.email}}
+                    </a>
+                </div>
+            </div>
+            <div class="card send-receive-ur" ng-show="!showContacts">
+                <label class="item item-input">
+                    <input ng-click="urInput = ''" ng-modal="urInput" type="text" value="{{urInput}}">
+                    <span class="item-note">UR</span>
+                </label>
+            </div>
+            <div class="card send-receive-textarea" ng-show="!showContacts">
+                <label class="item item-input">
+                    <textarea ng-click="sendReceiveText = ''">{{sendReceiveText}}</textarea>
+                </label>
+            </div>
+
+                <button class="button button-light button-outline button-block button-large send-receive-btn">Request</button>
+            <!--</form>-->
+        </div>
+
+    </ion-content>
+</ion-view>

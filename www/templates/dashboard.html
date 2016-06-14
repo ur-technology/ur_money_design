@@ -1,0 +1,88 @@
+
+<ion-view view-title="">
+    <ion-nav-bar class="bar-clear ur-bar">
+        <ion-nav-buttons side="left">
+            <button class="button button-clear button-icon icon ion-navicon" ng-click="toggleLeft()"></button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <button class="button button-clear"><i class="users-icon"></i></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content >
+        <div class="dash-chart-cont">
+            <h1 class="chart-title">3,035.0 <span>UR</span></h1>
+            <h2 class="chart-subtitle clearfix"><span class="green"><i class="ion ion-arrow-up-c" ></i> 13.5%</span> <span class="right"><i class="ion ion-arrow-up-c" ></i> 1,525.00</span></h2>
+            <hc-chart options="chartOptions" class="dash-chart" style="width: 100%; height: 140px; margin: 0 auto">Placeholder for generic chart</hc-chart>
+        </div>
+        <div class="button-bar chart-btns">
+            <button class="button button-clear">1D</button>
+            <button class="button button-clear">1W</button>
+            <button class="button button-clear">1M</button>
+            <button class="button button-clear">6M</button>
+            <button class="button button-clear">1Y</button>
+            <button class="button button-clear active">6Y</button>
+        </div>
+        <div class="list list-msgs">
+            <a class="item item-avatar" href="#">
+                <img src="img/avatar.jpg">
+                <div class="item-msg"><h2>@Jenny Jones says: </h2> This is exciting. I just got 2000ur</div>
+                <p class="msg-time"><i class="ion ion-clock"></i> Just now</p>
+                <span class="item-legend green"></span>
+            </a>
+            <a class="item item-avatar" href="#">
+                <img src="img/avatar.jpg">
+                <div class="item-msg"><h2>@Marry Taft says: </h2> Thanks for the invite sis!</div>
+                <p class="msg-time"><i class="ion ion-clock"></i> 30 minutes ago</p>
+                <span class="item-legend blue"></span>
+            </a>
+            <a class="item item-avatar" href="#">
+                <img src="img/avatar.jpg">
+                <div class="item-msg"><h2>@Jane Doe says: </h2> @Jenny I just sent you 2400ur. Enjoy!</div>
+                <p class="msg-time"><i class="ion ion-clock"></i> Yesterday</p>
+                <span class="item-legend green"></span>
+            </a>
+        </div>
+    </ion-content>
+    <!-- Button Starts -->
+    <div class="float-button">
+        <span class="height-fix">
+          <a class="content">
+              <i class="ion-plus"> </i>
+          </a>
+        </span>
+    </div>
+
+    <div class="bar bar-footer dash-footer">
+        <div class="button-bar footer-btns">
+            <a href="#/dash" class="button button-calm"><i class="home-icon"></i></a>
+            <a href="#/send" class="button button-calm"><i class="plane-icon"></i></a>
+            <a href="#/receive" class="button button-calm"><i class="receive-icon"></i></a>
+            <a class="button button-calm"><i class="invite-icon"></i></a>
+        </div>
+    </div>
+</ion-view>
+
+
+<!--<ion-tabs class="tabs-positive dash-footer">-->
+
+    <!--&lt;!&ndash; Dashboard Home Tab &ndash;&gt;-->
+    <!--<ion-tab icon="home-icon" href="#/dash/home">-->
+        <!--<ion-nav-view name="dash-home"></ion-nav-view>-->
+    <!--</ion-tab>-->
+
+    <!--&lt;!&ndash; Send Tab &ndash;&gt;-->
+    <!--<ion-tab icon="plane-icon" href="#/dash/send">-->
+        <!--<ion-nav-view name="dash-send"></ion-nav-view>-->
+    <!--</ion-tab>-->
+
+    <!--&lt;!&ndash; Receive Tab &ndash;&gt;-->
+    <!--<ion-tab icon="receive-icon" href="#/dash/receive">-->
+        <!--<ion-nav-view name="dash-receive"></ion-nav-view>-->
+    <!--</ion-tab>-->
+
+    <!--&lt;!&ndash; Invite Tab &ndash;&gt;-->
+    <!--<ion-tab icon="hand-coin-icon"  href="#/dash/invite">-->
+        <!--<ion-nav-view name="dash-invite"></ion-nav-view>-->
+    <!--</ion-tab>-->
+
+<!--</ion-tabs>-->
