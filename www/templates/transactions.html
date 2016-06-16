@@ -1,0 +1,45 @@
+<ion-nav-bar class="bar-clear ur-bar">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear button-icon icon ion-navicon" ng-click="toggleLeft()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear"><i class="users-icon"></i></button>
+    </ion-nav-buttons>
+</ion-nav-bar>
+
+<ion-tabs class="tabs-light tabs-top transactions-tab-nav">
+
+    <!-- Sent Tab -->
+    <ion-tab title="Sent" icon-on="sent-icon-on" icon-off="sent-icon-off" href="#/transaction/sent">
+        <ion-nav-view name="tab-sent"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Received Tab -->
+    <ion-tab title="Received" icon-on="received-icon-on" icon-off="received-icon-off" href="#/transaction/received">
+        <ion-nav-view name="tab-received"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Earned Tab -->
+    <ion-tab title="Earned" icon-on="earned-icon-on" icon-off="earned-icon-off"  href="#/transaction/earned">
+        <ion-nav-view name="tab-earned"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs>
+
+<!-- Button Starts -->
+<div class="float-button">
+        <span class="height-fix">
+          <a class="content">
+              <i class="ion-plus"> </i>
+          </a>
+        </span>
+</div>
+
+<div class="bar bar-footer dash-footer">
+    <div class="button-bar footer-btns">
+        <a href="#/dash" class="button button-calm"><i class="home-icon"></i></a>
+        <a href="#/send" class="button button-calm"><i class="plane-icon"></i></a>
+        <a href="#/receive" class="button button-calm"><i class="receive-icon"></i></a>
+        <a class="button button-calm"><i class="invite-icon"></i></a>
+    </div>
+</div>

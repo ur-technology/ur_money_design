@@ -157,3 +157,21 @@ angular.module('urApp.controllers', [])
         $scope.sendReceiveText = 'Lorem ipsum dolor sit amet, vix tation consul cu, vim ut lorem omnium mandamus. Cum illud adipiscing liberavisse at, possim fastidii ex usu';
 
     })
+
+    // controller for transaction screens
+    .controller('transactionCtrl', function ($scope,$http) {
+
+        $scope.txtLimit = 70;
+        $scope.showSeeMore = false;
+        // -------------------- transaction chat
+        $http.get('js/transactions.json').success(function(data){
+            $scope.transactions = data;
+        });
+
+        $scope.transFilter = '';
+    })
+    .controller('inviteCtrl',function($scope,$ionicHistory){
+        $scope.goBack = function(){
+            $ionicHistory.goBack();
+        };
+    })
