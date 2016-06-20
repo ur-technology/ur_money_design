@@ -85,7 +85,28 @@ angular.module('urApp', ['ionic','urApp.controllers','urApp.directives'])
                 templateUrl: "templates/invite-friends.html",
                 controller: 'inviteCtrl'
             })
-        $urlRouterProvider.otherwise("/transaction/sent");
+
+            // ---------  Scan Code screen
+            .state('scanCode', {
+                url: "/scanCode",
+                templateUrl: "templates/scan-code.html",
+                controller: 'scanCodeCtrl'
+            })
+
+            // ---------  My Address screen
+            .state('myAddress', {
+                url: "/myAddress",
+                templateUrl: "templates/my-address.html",
+                controller: 'scanCodeCtrl'
+            })
+
+            // ---------  UnLock screen
+            .state('unlock', {
+                url: "/unlock",
+                templateUrl: "templates/unlock.html",
+                controller: 'unlockCtrl'
+            })
+        $urlRouterProvider.otherwise("/dash");
 
     });
 

@@ -915,3 +915,176 @@ i.menu-icon-7{
     background-color: #ffffff;
     height: 60px;
 }
+
+/*-------------------------------------------
+    Scan Code screen
+---------------------------------------------*/
+.scan-code,
+.my-address{
+    background: rgba(237,237,237,0);
+    background: -moz-linear-gradient(top, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 78%, rgba(237,237,237,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,0)), color-stop(78%, rgba(237,237,237,1)), color-stop(100%, rgba(237,237,237,1)));
+    background: -webkit-linear-gradient(top, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 78%, rgba(237,237,237,1) 100%);
+    background: -o-linear-gradient(top, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 78%, rgba(237,237,237,1) 100%);
+    background: -ms-linear-gradient(top, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 78%, rgba(237,237,237,1) 100%);
+    background: linear-gradient(to bottom, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 78%, rgba(237,237,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ededed', GradientType=0 );
+}
+.scan-code .bar-header,
+.scan-code .bar-subheader,
+.my-address .bar-header,
+.my-address .bar-subheader{
+    background-color: #3b3b3b;
+    border-color: #3b3b3b;
+}
+.scan-code .bar-subheader,
+.my-address .bar-subheader{
+    height: 52px;
+}
+.scan-code .back-btn,
+.my-address .back-btn{
+    color: #ffffff;
+}
+.scan-code .scan-content{
+    /*background: url("../img/sc-bg.png") no-repeat fixed;*/
+    /*background-size: contain;*/
+    background: transparent;
+}
+.scan-code .scan-content .scroll{
+    height: 100%;
+}
+.scan-code .scan-steps-btn,
+.my-address .scan-steps-btn{
+    margin: 0 auto;
+    position: relative;
+    left: -13px;
+}
+.scan-code .scan-steps-btn .button,
+.my-address .scan-steps-btn .button{
+    width: 100px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 31px;
+    font-weight: 600;
+}
+.scan-code .scan-steps-btn .button:first-child,
+.my-address .scan-steps-btn .button:first-child{
+    border-radius: 6px 0 0 6px;
+    margin-right: -5px;
+    border-right-color: transparent;
+}
+.scan-code .scan-steps-btn .button:last-child,
+.my-address .scan-steps-btn .button:last-child{
+    border-radius: 0 6px 6px 0;
+    border-left-color: transparent;
+}
+.scan-code .scan-steps-btn .button.active,
+.my-address .scan-steps-btn .button.active{
+    background-color: #ffffff;
+    color: #333333;
+}
+.scan-code .code-scanner{
+    background: url("../img/scanner-bg.png") no-repeat center 0;
+    background-size: contain;
+    height: 100%;
+}
+.scan-content .flash-btn{
+    position: absolute;
+    bottom: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+.scan-content .flash-btn .icon{
+    margin-right: 3px;
+}
+/*--------------------------------------------------
+    My Address screen
+----------------------------------------------------*/
+.my-address{
+
+}
+.my-address .my-address-content{
+    background-color: transparent;
+}
+.my-address .my-address-content .scroll{
+    height: 100%;
+}
+.my-address .my-address-content{
+background: url("../img/qr-bg.jpg") no-repeat center 0;
+}
+.my-address .my-address-content .qr-code-cont{
+    background-color: #fff;
+    padding-top: 10px;
+    width: 176px;
+    margin: 135px auto 0;
+}
+.my-address .my-address-content .qr-code-cont img{
+    display: block;
+    margin: 0 20px 10px;
+}
+.my-address .my-address-content .qr-code-cont .button{
+    border-top: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #3aade2;
+    text-transform: uppercase;
+    min-height: 40px;
+    height: 40px;
+}
+
+/*--------------------------------------------------
+    Unlock Screen
+----------------------------------------------------*/
+.unlock{
+    background-color: #ef3f37;
+}
+
+.unlock .heading{
+    text-align: center;
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 0;
+    margin-top: 170px;
+}
+.unlock .sub-heading{
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+}
+.unlock .pin-input-cont{
+    text-align: center;
+}
+.unlock .pin-input-cont .pin-input{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin: 0 2px;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+.unlock .unlock-keypad{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.unlock-keypad .row{
+    border-bottom: 1px solid rgba(256,256,256,0.3);
+}
+.unlock-keypad .row .col.col-33.mid-col{
+    border-left: 1px solid rgba(256,256,256,0.3);
+    border-right: 1px solid rgba(256,256,256,0.3);
+}
+.unlock-keypad .pin-btn{
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    font-size: 28px;
+    min-height: 40px;
+}

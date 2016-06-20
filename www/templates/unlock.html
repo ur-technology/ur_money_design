@@ -1,0 +1,67 @@
+
+<ion-view view-title="" class="unlock">
+    <ion-content >
+        <h1 class="heading">UR Capital</h1>
+        <p class="sub-heading">Unlock with your PIN</p>
+        <div class="pin-input-cont">
+            <div class="pin-input">
+                {{passcode.substring(0, 1)}}
+            </div>
+            <div class="pin-input">
+                {{passcode.substring(1, 2)}}
+            </div>
+            <div class="pin-input">
+                {{passcode.substring(2, 3)}}
+            </div>
+            <div class="pin-input">
+                {{passcode.substring(3, 4)}}
+            </div>
+        </div>
+    </ion-content>
+    <div class="unlock-keypad">
+        <div class="row">
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(1)">1</button>
+            </div>
+            <div class="col col-33 mid-col">
+                <button class="button button-clear pin-btn" ng-click="add(2)">2</button>
+            </div>
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(3)">3</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(4)">4</button>
+            </div>
+            <div class="col col-33 mid-col">
+                <button class="button button-clear pin-btn" ng-click="add(5)">5</button>
+            </div>
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(6)">6</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(7)">7</button>
+            </div>
+            <div class="col col-33 mid-col">
+                <button class="button button-clear pin-btn" ng-click="add(8)">8</button>
+            </div>
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(9)">9</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <button class="button button-clear pin-btn"></button>
+            </div>
+            <div class="col col-33 mid-col">
+                <button class="button button-clear pin-btn" ng-click="add(0)">0</button>
+            </div>
+            <div class="col col-33">
+                <button class="button icon ion-backspace-outline button-clear pin-btn" ng-click="delete()"></button>
+            </div>
+        </div>
+    </div>
+</ion-view>

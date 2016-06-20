@@ -170,8 +170,41 @@ angular.module('urApp.controllers', [])
 
         $scope.transFilter = '';
     })
+
+    // controller for invite friends screens
     .controller('inviteCtrl',function($scope,$ionicHistory){
         $scope.goBack = function(){
             $ionicHistory.goBack();
         };
+    })
+
+    // controller for scan code screens
+    .controller('scanCodeCtrl',function($scope,$ionicHistory){
+        $scope.goBack = function(){
+            $ionicHistory.goBack();
+        };
+    })
+
+
+    // controller for unlock screen
+    .controller('unlockCtrl',function($scope, $location, $timeout){
+
+        $scope.passcode = "";
+
+        $scope.add = function(value) {
+            if($scope.passcode.length < 4) {
+                $scope.passcode = $scope.passcode + value;
+                if($scope.passcode.length == 4) {
+                    $timeout(function() {
+                        console.log("The four digit code was entered");
+                    }, 500);
+                }
+            }
+        };
+
+        $scope.delete = function() {
+            if($scope.passcode.length > 0) {
+                $scope.passcode = $scope.passcode.substring(0, $scope.passcode.length - 1);
+            }
+        }
     })
