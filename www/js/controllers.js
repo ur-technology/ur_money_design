@@ -141,9 +141,8 @@ angular.module('urApp.controllers', [])
         };
 
         $scope.removeContact = function(){
-            console.log('asdf');
             $scope.showContactInput = true;
-            a$scope.contactItem = '';
+            $scope.contactItem = '';
         };
 
         //    ----------------------------- filtering contacts
@@ -185,7 +184,6 @@ angular.module('urApp.controllers', [])
         };
     })
 
-
     // controller for unlock screen
     .controller('unlockCtrl',function($scope, $location, $timeout){
 
@@ -205,6 +203,102 @@ angular.module('urApp.controllers', [])
         $scope.delete = function() {
             if($scope.passcode.length > 0) {
                 $scope.passcode = $scope.passcode.substring(0, $scope.passcode.length - 1);
+            }
+        }
+    })
+
+    // controller for registration screen
+    .controller('registrationCtrl',function($scope,$ionicPopover,$http){
+
+        // credentials for registration
+        $scope.credentials = {
+            'phoneCountryName':'United States',
+            'phoneCountryCode':'+1',
+            'phoneNumber':'(615)856-6616'
+        };
+
+        // selection of country
+        $scope.countrySelect = function(item){
+            $scope.credentials.phoneCountryName = item.name;
+            $scope.credentials.phoneCountryCode = item.code;
+            $scope.popover.hide();
+        };
+
+
+        // phone number entry
+        $scope.add = function(value) {
+            $scope.credentials.phoneNumber += value;
+        };
+
+        $scope.delete = function() {
+            if($scope.credentials.phoneNumber.length > 0) {
+                $scope.credentials.phoneNumber = $scope.credentials.phoneNumber.substring(0, $scope.credentials.phoneNumber.length - 1);
+            }
+        }
+
+        $http.get('js/countries.json').success(function(data){
+            $scope.countries = data;
+        });
+
+
+        // .fromTemplate() method
+        var template = '<ion-popover-view><ion-header-bar> <h1 class="title">My Popover Title</h1> </ion-header-bar> <ion-content> Hello! </ion-content></ion-popover-view>';
+
+        //$scope.popover = $ionicPopover.fromTemplate(template, {
+        //    scope: $scope
+        //});
+
+        // .fromTemplateUrl() method
+        $ionicPopover.fromTemplateUrl('templates/country-popover.html', {
+            scope: $scope
+        }).then(function(popover) {
+            $scope.popover = popover;
+        });
+
+
+        $scope.openCountryPopover = function($event) {
+            $scope.popover.show($event);
+
+        };
+        $scope.closePopover = function() {
+            $scope.popover.hide();
+        };
+        //Cleanup the popover when we're done with it!
+        $scope.$on('$destroy', function() {
+            $scope.popover.remove();
+        });
+        // Execute action on hide popover
+        $scope.$on('popover.hidden', function() {
+            // Execute action
+        });
+        // Execute action on remove popover
+        $scope.$on('popover.removed', function() {
+            // Execute action
+        });
+
+    //    choose country top
+        $scope.chooseCountryTop = false;
+
+    })
+
+    // controller for phone number verification screen
+    .controller('verificationCtrl',function($scope,$location,$timeout){
+        $scope.verifycode = "";
+
+        $scope.add = function(value) {
+            if($scope.verifycode.length < 6) {
+                $scope.verifycode = $scope.verifycode + value;
+                if($scope.verifycode.length == 6) {
+                    $timeout(function() {
+                        console.log("The six digit code was entered");
+                    }, 500);
+                }
+            }
+        };
+
+        $scope.delete = function() {
+            if($scope.verifycode.length > 0) {
+                $scope.verifycode = $scope.verifycode.substring(0, $scope.verifycode.length - 1);
             }
         }
     })

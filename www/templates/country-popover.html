@@ -1,0 +1,20 @@
+<ion-popover-view class="country-popover">
+    <ion-header-bar class="bar-light">
+        <label class="item-input-wrapper form-control">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input  type="search" ng-model="countryQuery" placeholder="Search">
+        </label>
+    </ion-header-bar>
+    <ion-content class="padding" ng-class="{'choose-country-top' : countryQuery.length > 0}">
+
+        <div class="list">
+            <div class="item item-divider text-center">
+                Choose Country
+            </div>
+            <a class="item" ng-click="countrySelect(country)" ng-repeat="country in countries | filter: countryQuery">
+                {{country.name}}
+                <span class="pull-right">{{country.code}}</span>
+            </a>
+        </div>
+    </ion-content>
+</ion-popover-view>

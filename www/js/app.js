@@ -106,6 +106,20 @@ angular.module('urApp', ['ionic','urApp.controllers','urApp.directives'])
                 templateUrl: "templates/unlock.html",
                 controller: 'unlockCtrl'
             })
+
+            // ---------  Registration screen
+            .state('registration', {
+                url: "/registration",
+                templateUrl: "templates/registration.html",
+                controller: 'registrationCtrl'
+            })
+
+            // ---------  Phone Number verification screen
+            .state('verification', {
+                url: "/verification",
+                templateUrl: "templates/phone-number-verification.html",
+                controller: 'verificationCtrl'
+            })
         $urlRouterProvider.otherwise("/dash");
 
     });

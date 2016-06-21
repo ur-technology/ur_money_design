@@ -1,0 +1,87 @@
+
+<ion-view view-title="" class="phone-number-verification">
+    <ion-header-bar class="bar-light">
+        <div class="title">+1(615)856-6616</div>
+        <button class="button button-clear done-btn">Done</button>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <p class="sub-heading">We have sent you an SMS with a code to a number
+            above.<br/>
+            To complete your phone number verification, please
+            enter the 6-digit activation code.
+        </p>
+        <div class="verification-cont">
+            <div class="pin-input-cont">
+                <div class="pin-input">
+                    {{verifycode.substring(0, 1)}}
+                </div>
+                <div class="pin-input">
+                    {{verifycode.substring(1, 2)}}
+                </div>
+                <div class="pin-input">
+                    {{verifycode.substring(2, 3)}}
+                </div>
+                <div class="pin-input">
+                    {{verifycode.substring(3, 4)}}
+                </div>
+                <div class="pin-input">
+                    {{verifycode.substring(4, 5)}}
+                </div>
+                <div class="pin-input">
+                    {{verifycode.substring(5, 6)}}
+                </div>
+            </div>
+
+            <div class="verify-btns">
+                <button class="button button-light">Call Me Again</button>
+                <button class="button button-light">SMS Me Again</button>
+            </div>
+        </div>
+    </ion-content>
+    <div class="unlock-keypad">
+        <div class="row">
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(1)">1</button>
+            </div>
+            <div class="col col-33 mid-col">
+                <button class="button button-clear pin-btn" ng-click="add(2)">2</button>
+            </div>
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(3)">3</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(4)">4</button>
+            </div>
+            <div class="col col-33 mid-col">
+                <button class="button button-clear pin-btn" ng-click="add(5)">5</button>
+            </div>
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(6)">6</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(7)">7</button>
+            </div>
+            <div class="col col-33 mid-col">
+                <button class="button button-clear pin-btn" ng-click="add(8)">8</button>
+            </div>
+            <div class="col col-33">
+                <button class="button button-clear pin-btn" ng-click="add(9)">9</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <button class="button button-clear pin-btn"></button>
+            </div>
+            <div class="col col-33 mid-col">
+                <button class="button button-clear pin-btn" ng-click="add(0)">0</button>
+            </div>
+            <div class="col col-33">
+                <button class="button icon ion-backspace-outline button-clear pin-btn" ng-click="delete()"></button>
+            </div>
+        </div>
+    </div>
+</ion-view>
