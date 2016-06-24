@@ -1,0 +1,20 @@
+<ion-nav-bar class="bar-clear ur-bar bg-white">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear button-icon icon ion-navicon" ng-click="toggleLeft()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear"><i class="users-icon"></i></button>
+    </ion-nav-buttons>
+</ion-nav-bar>
+<ion-view class="conversation-chats">
+    <ion-content>
+        <ion-list class="chats-list">
+            <a href="#/conversation/chats/{{chat.imgID}}" class="item item-avatar" ng-repeat="chat in chats">
+                <img src="img/avatars/avatar-{{chat.imgID}}.jpg" alt="avatar">
+                <h2>{{chat.name}}</h2>
+                <p><i class="icon ion-ios-location"></i> {{chat.city}}, {{chat.country}}</p>
+                <span class="item-note">{{chat.time}}</span>
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>

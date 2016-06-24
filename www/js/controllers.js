@@ -302,3 +302,90 @@ angular.module('urApp.controllers', [])
             }
         }
     })
+
+    // controller for conversation screens
+    .controller('conversationCtrl', function ($scope,$http,$state,$timeout,$ionicScrollDelegate,$ionicSideMenuDelegate) {
+
+        // toggle left main manu
+        $scope.toggleLeft = function(){
+            $ionicSideMenuDelegate.toggleLeft()
+        };
+
+        // -------------------- conversation contacts
+        $http.get('js/contacts.json').success(function(data){
+            $scope.contacts = data;
+        });
+
+        // -------------------- conversation chats
+        $http.get('js/chats.json').success(function(data){
+            $scope.chats = data;
+
+            $scope.chatID = $state.params.aId;
+        });
+
+        // -------------------- conversation chat messages
+        $scope.hideTime = true;
+
+        var alternate,
+            isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
+
+        $scope.sendMessage = function() {
+            alternate = !alternate;
+
+            var d = new Date();
+            d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
+
+            $scope.messages.push({
+                userID: alternate ? '1' : '2',
+                text: $scope.data.message,
+                time: d
+            });
+
+            delete $scope.data.message;
+            $ionicScrollDelegate.scrollBottom(true);
+
+        };
+
+
+        $scope.inputUp = function() {
+            if (isIOS) $scope.data.keyboardHeight = 216;
+            $timeout(function() {
+                $ionicScrollDelegate.scrollBottom(true);
+            }, 300);
+
+        };
+
+        $scope.inputDown = function() {
+            if (isIOS) $scope.data.keyboardHeight = 0;
+            $ionicScrollDelegate.resize();
+        };
+
+        $scope.closeKeyboard = function() {
+            // cordova.plugins.Keyboard.close();
+        };
+
+
+        $scope.data = {};
+        $scope.myID = '1';
+        $scope.messages = [
+            {"userID":"1","text":"Hi,I just sent 3000 UR in your account. Let me know if you need more.","time":"21-june-2016"},
+            {"userID":"2","text":"Hey, Thanks for the 3000 UR you sent my way. I really appreciate that. Let's catch up on the weekend.","time":"22-june-2016"}
+        ];
+
+    })
+
+
+    .controller('splashCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+
+        $scope.next = function() {
+            $ionicSlideBoxDelegate.next();
+        };
+        $scope.previous = function() {
+            $ionicSlideBoxDelegate.previous();
+        };
+
+        // Called each time the slide changes
+        $scope.slideChanged = function(index) {
+            $scope.slideIndex = index;
+        };
+    })

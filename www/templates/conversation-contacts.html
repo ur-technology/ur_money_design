@@ -1,0 +1,20 @@
+<ion-nav-bar class="bar-clear ur-bar bg-white">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear button-icon icon ion-navicon" ng-click="toggleLeft()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear"><i class="users-icon"></i></button>
+    </ion-nav-buttons>
+</ion-nav-bar>
+
+<ion-view class="conversation-contacts">
+    <ion-content>
+        <ion-list class="contacts-list">
+            <a href="#" class="item item-avatar" ng-repeat="contact in contacts">
+                <img src="img/avatars/avatar-{{contact.imgID}}.jpg" alt="avatar">
+                <h2>{{contact.name}}</h2>
+                <p><i class="icon ion-ios-location"></i> {{contact.city}}, {{contact.country}}</p>
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>

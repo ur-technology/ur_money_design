@@ -1,0 +1,22 @@
+<!--<ion-nav-bar class="bar-clear ur-bar">-->
+    <!--<ion-nav-buttons side="left">-->
+        <!--<button class="button button-clear button-icon icon ion-navicon" ng-click="toggleLeft()"></button>-->
+    <!--</ion-nav-buttons>-->
+    <!--<ion-nav-buttons side="right">-->
+        <!--<button class="button button-clear"><i class="users-icon"></i></button>-->
+    <!--</ion-nav-buttons>-->
+<!--</ion-nav-bar>-->
+
+<ion-tabs class="tabs-light tabs-top transactions-tab-nav" ng-class="{'tabs-item-hide': hideTabs}">
+
+    <!-- Contact Tab -->
+    <ion-tab title="Contacts" icon-on="contacts-icon-on" icon-off="contacts-icon-off" href="#/conversation/contacts">
+        <ion-nav-view name="tab-contacts"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Chat Tab -->
+    <ion-tab title="Chats" icon-on="chats-icon-on" icon-off="chats-icon-off" href="#/conversation/chats">
+        <ion-nav-view name="tab-chats"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs>

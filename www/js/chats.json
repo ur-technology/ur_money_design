@@ -5,69 +5,69 @@
     "imgID":"1",
     "city":"Thimphu",
     "country":"Bhutan",
-    "email":"JhonDoe@gmail.com"
+    "time":"02:52 pm"
   },
   {
     "name": "Jenny Doe",
     "imgID":"2",
     "city":"Ottawa",
     "country":"Canada",
-    "email":"jennyDoe@ur.capital"
+    "time":"10:47 am"
   },
   {
     "name": "Rashi Doe",
     "imgID":"3",
     "city":"Beijing",
     "country":"China",
-    "email":"rashiDoe@gmail.com"
+    "time":"21-06-2016"
   },
   {
     "name": "Jon Snow",
     "imgID":"4",
     "city":"Bogota",
     "country":"Colombia",
-    "email":"jonSnow@ur.capital"
+    "time":"21-06-2016"
   },
   {
     "name": "Sansa Stark",
     "imgID":"5",
     "city":"Havana",
     "country":"Cuba",
-    "email":"sansaStark@gmail.com"
+    "time":"20-06-2016"
   },
   {
     "name": "Ramsay Bolton",
     "imgID":"6",
     "city":"Helsinki",
     "country":"Finland",
-    "email":"ramsayBolton@ur.capital"
+    "time":"19-06-2016"
   },
   {
     "name": "Daenerys",
     "imgID":"7",
     "city":"Paris",
     "country":"France",
-    "email":"daenerys@gmail.com"
+    "time":"18-06-2016"
   },
   {
     "name": "Gregor Clegane",
     "imgID":"8",
     "city":"Berlin",
     "country":"Germany",
-    "email":"gregorClegane@ur.capital"
+    "time":"17-06-2016"
   },
   {
     "name": "Khal Drogo",
     "imgID":"9",
     "city":"Ankara",
     "country":"Turkey",
-    "email":"khalDrogo@gmail.com"
+    "time":"16-05-2016"
   },
   {
     "name": "Tyrion Lannister",
     "imgID":"10",
     "city":"Washington, D.C.",
     "country":"United States",
-    "email":"tyrionLannister@ur.capital"
+    "time":"15-05-2016"
   }
 ]

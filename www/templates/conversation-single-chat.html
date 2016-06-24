@@ -1,0 +1,27 @@
+<ion-header-bar class="bar-clear ur-bar">
+    <a ng-click="goBack()" class="button button-icon ion-arrow-left-c"></a>
+    <h2 class="title">Jenny Jone</h2>
+    <a href="#" class="button button-icon ion-more"></a>
+</ion-header-bar>
+
+<ion-view class="chat-view" hide-tabs>
+    <ion-content class="padding has-footer">
+        <div class="list messages-list">
+            <div class="item item-text-wrap" ng-class="{'other' : myID != message.userID,}" ng-repeat="message in messages">
+                <img src="img/avatars/avatar-{{message.userID}}.jpg" alt="img">
+                <div class="msg-text">
+                    <p>{{ message.text }} </p>
+                    <div class="item-note">{{message.time}}</div>
+                </div>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+<div keyboard-attach class="bar item-input-inset ur-message-send">
+    <label class="item-input-wrapper">
+        <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
+    </label>
+    <button class="button button-icon ion-android-send" ng-click="sendMessage()"></button>
+</div>

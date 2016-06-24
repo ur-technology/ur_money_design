@@ -120,8 +120,50 @@ angular.module('urApp', ['ionic','urApp.controllers','urApp.directives'])
                 templateUrl: "templates/phone-number-verification.html",
                 controller: 'verificationCtrl'
             })
+
+            //  conversations screens
+            .state('conversation', {
+                url: "/conversation",
+                abstract: true,
+                templateUrl: "templates/conversations.html",
+                controller: 'conversationCtrl'
+            })
+            .state('conversation.contacts', {
+                url: "/contacts",
+                views : {
+                    'tab-contacts': {
+                        templateUrl: "templates/conversation-contacts.html",
+                        controller: 'conversationCtrl'
+                    }
+                }
+            })
+            .state('conversation.chats', {
+                url: "/chats",
+                views : {
+                    'tab-chats': {
+                        templateUrl: "templates/conversation-chats.html",
+                        controller: 'conversationCtrl'
+                    }
+                }
+            })
+            .state('conversation.chat', {
+                url: '/chats/:aId',
+                views: {
+                    'tab-chats' : {
+                        templateUrl: 'templates/conversation-single-chat.html',
+                        controller: 'conversationCtrl'
+                    }
+                }
+            })
+
+            // splash slide screen
+            .state('splash', {
+                url: '/splash',
+                templateUrl: 'templates/splash-slide.html',
+                controller: 'splashCtrl'
+            })
+
         $urlRouterProvider.otherwise("/dash");
 
     });
-
 
