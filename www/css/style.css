@@ -1471,7 +1471,9 @@ background: url("../img/qr-bg.jpg") no-repeat center 0;
     margin-top: 180px;
 }
 .main-splash .ur-logo img{
-    margin-bottom: 15px;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 15px;
 }
 .main-splash .loader{
     text-align: center;
@@ -1508,11 +1510,11 @@ background: url("../img/qr-bg.jpg") no-repeat center 0;
     text-align: center;
 }
 .about-text p{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: #676767;
 }
 .about-text a{
     color: #227796;
-    font-size: 16px;
+    font-size: 14px;
 }
