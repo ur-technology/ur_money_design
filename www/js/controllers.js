@@ -389,3 +389,10 @@ angular.module('urApp.controllers', [])
             $scope.slideIndex = index;
         };
     })
+
+    // controller for about us screen
+    .controller('aboutCtrl',function($scope,$ionicHistory){
+        $scope.goBack = function(){
+            $ionicHistory.goBack();
+        };
+    })

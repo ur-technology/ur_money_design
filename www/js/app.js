@@ -79,7 +79,7 @@ angular.module('urApp', ['ionic','urApp.controllers','urApp.directives'])
                 }
             })
 
-            // ---------  Refer Friend screen
+            // ---------  Refer/invite Friend screen
             .state('invite', {
                 url: "/invite",
                 templateUrl: "templates/invite-friends.html",
@@ -156,11 +156,25 @@ angular.module('urApp', ['ionic','urApp.controllers','urApp.directives'])
                 }
             })
 
+            // main splash screen
+            .state('mainSplash', {
+                url: '/mainSplash',
+                templateUrl: 'templates/splash.html',
+                controller: 'splashCtrl'
+            })
+
             // splash slide screen
             .state('splash', {
                 url: '/splash',
                 templateUrl: 'templates/splash-slide.html',
                 controller: 'splashCtrl'
+            })
+
+            // about us screen
+            .state('aboutUs', {
+                url: "/aboutUs",
+                templateUrl: "templates/about.html",
+                controller: 'aboutCtrl'
             })
 
         $urlRouterProvider.otherwise("/dash");

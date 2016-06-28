@@ -923,10 +923,10 @@ i.menu-icon-7{
     vertical-align: middle;
 }
 .text-btn{
-    background-color: #34d144;
+    background-color: #36399d;
 }
 .email-btn{
-    background-color: #21ce99;
+    background-color: #e94096;
 }
 .facebook-btn{
     background-color: #3b589a;
@@ -934,13 +934,23 @@ i.menu-icon-7{
 .twitter-btn{
     background-color: #21a9e5;
 }
+.whatsapp-btn{
+    background-color: #4ac75a;
+}
 .invite-btns .button.copy-btn{
     max-width: 254px;
-    margin: 14px auto 0;
+    margin: 10px auto 0;
     font-size: 15px;
     font-weight: 700;
     color: #555555;
     background-color: #ffffff;
+    height: 50px;
+}
+.invite-btns .button.whatsapp-btn{
+    display: block;
+    width: 100%;
+    max-width: 254px;
+    margin: 5px auto 0;
     height: 50px;
 }
 
@@ -1444,4 +1454,65 @@ background: url("../img/qr-bg.jpg") no-repeat center 0;
     padding: 0;
     border: none;
     background-color: transparent;
+}
+/*--------------------------------------*/
+.main-splash{
+    background: rgba(241,241,241,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(241,241,241,1)), color-stop(100%, rgba(196,202,206,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#c4cace', GradientType=1 );
+}
+.main-splash .ur-logo{
+    text-align: center;
+    margin-top: 180px;
+}
+.main-splash .ur-logo img{
+    margin-bottom: 15px;
+}
+.main-splash .loader{
+    text-align: center;
+    margin-top: 115px;
+}
+/*-----------------------------------------
+    about us Screen
+-------------------------------------------*/
+.about-us{
+    background: rgba(241,241,241,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(241,241,241,1)), color-stop(100%, rgba(196,202,206,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(241,241,241,1) 0%, rgba(196,202,206,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#c4cace', GradientType=1 );
+}
+.about-us .ur-logo{
+    text-align: center;
+    padding: 15px 0 25px;
+}
+.about-us .ur-logo img{
+    max-width: 100%;
+}
+.about-text{
+    padding: 0 20px;
+}
+.about-text .heading{
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 300;
+    color: #323232;
+    text-align: center;
+}
+.about-text p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #676767;
+}
+.about-text a{
+    color: #227796;
+    font-size: 16px;
 }
