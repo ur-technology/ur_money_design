@@ -30,7 +30,7 @@
                     <img src="img/avatar.jpg">
                     <h2>{{transaction.name}} <span class="item-date-time">{{transaction.date}}, {{transaction.time}}</span></h2>
                     <p>{{transaction.message | limitTo : txtLimit}} <span ng-show="showSeeMore">{{::(transaction.message.length > 80)? showSeeMore = true:''}} &hellip; <a ng-click="txtLimit = null; showSeeMore = !showSeeMore">See More</a></span></p>
-                    <i class="icon trans-ur">{{transaction.earnedUR}} UR</i>
+                    <i class="icon trans-ur">{{transaction.earnedUR}}<br>UR</i>
                 </div>
             </div>
 

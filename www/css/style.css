@@ -720,6 +720,7 @@ i.menu-icon-7{
     text-align: center;
     line-height: 1em;
     padding-bottom: 1px;
+    margin: 0 -5px;
 }
 .transaction-filter-top .filter-btns .button.button-outline{
     font-size: 8px;
@@ -728,7 +729,7 @@ i.menu-icon-7{
     border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 1px 5px 2px;
-    margin: 0 4px 4px;
+    margin: 0 1px 4px;
     min-height: 16px;
     min-width: 0;
 }
@@ -742,20 +743,20 @@ i.menu-icon-7{
 }
 
 .transaction-filter-top  .total-ur{
-    font-size: 33px;
+    font-size: 24px;
     font-weight: 300;
     color: #ffffff;
     line-height: 1.4em;
-    padding: 0 10px;
+    /*padding: 0 10px;*/
 }
 .transaction-filter-top  .last-update{
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(256,256,256,0.6);
     line-height: 1.4em;
-    padding: 0 10px;
+    /*padding: 0 10px;*/
 }
 .transaction-filter-top  .last-update i{
-    margin-right: 5px;
+    margin-right: 3px;
     color: rgba(256,256,256,1);
 }
 .transaction-filter-top .invite-and-earn {
@@ -764,9 +765,9 @@ i.menu-icon-7{
     font-size: 10px;
     line-height: 1.1;
     color: #d0d0d0;
-    right: -47px;
+    right: -52px;
     bottom: -34px;
-    padding: 17px 50px 40px 20px;
+    padding: 12px 50px 40px 15px;
     text-align: center;
     width: 180px;
     border-radius: 59% 70% 20% 80%;
@@ -822,7 +823,7 @@ i.menu-icon-7{
     margin-bottom: 7px;
 }
 .transaction-chat .item{
-    padding-right: 85px;
+    padding-right: 65px;
     padding-left: 55px;
 }
 .transaction-chat .item img{
@@ -852,7 +853,8 @@ i.menu-icon-7{
     font-weight: 600;
     color: #38454f;
     border-left: 1px solid #dedede;
-    padding-left: 15px;
+    padding-left: 8px;
+    text-align: center;
 }
 
 /*-----------------------------------
@@ -1409,7 +1411,8 @@ background: url("../img/qr-bg.jpg") no-repeat center 0;
 .splash-slide .splash-logo{
     margin-top: 60px;
 }
-.splash-slide .has-footer{
+.splash-slide .has-footer,
+.main-splash .has-footer{
     bottom: 220px;
 }
 .welcome-ur{
@@ -1418,6 +1421,7 @@ background: url("../img/qr-bg.jpg") no-repeat center 0;
     letter-spacing: 0.01em;
     text-align: center;
     width: 100%;
+    margin-top: -20px;
 }
 .welcome-ur h3{
     font-size: 22px;
@@ -1432,29 +1436,61 @@ background: url("../img/qr-bg.jpg") no-repeat center 0;
     line-height: 21px;
     margin-bottom: 0;
 }
-.welcome-ur .terms-btn{
+.welcome-ur .button.terms-btn{
     font-size: 14px;
     font-weight: 300;
     color: #1576e0;
     margin-top: 0;
     line-height: 1.2;
 }
-.welcome-ur .agree-btn{
+.welcome-ur .button.agree-btn{
     font-size: 18px;
     font-weight: 300;
     color: #1576e0;
     margin: 30px 0;
+    letter-spacing: 0.01em;
+}
+.welcome-ur .button.learn-btn{
+    font-size: 10px;
+    font-weight: 500;
+    color: #767676;
+    margin: 7px 0 10px;
 }
 .welcome-ur .agree-btn>span{
     padding-bottom: 5px;
-    border-bottom: 1px dotted #1576e0;
+    border-bottom: 2px dotted #1576e0;
 }
-.splash-slide .bar.bar-footer{
+.splash-slide .bar.bar-footer,
+.main-splash .bar.bar-footer{
     height: auto;
     padding: 0;
     border: none;
     background-color: transparent;
 }
+.main-splash .welcome-ur h3{
+    font-size: 22px;
+    font-weight: 300;
+    color: #323232;
+    margin: 35px 0 5px;
+}
+.main-splash .welcome-ur .ur-slogan{
+    font-size: 14px;
+    color: #323232;
+    margin-bottom: 5px;
+}
+.main-splash .welcome-ur p{
+    font-size: 13px;
+    line-height: 1.4em;
+}
+.main-splash .welcome-ur .terms-btn{
+    font-size: 13px;
+    font-weight: 300;
+    color: #1576e0;
+}
+.main-splash .welcome-ur .button.agree-btn{
+    margin: 10px 0 0;
+}
+
 /*--------------------------------------*/
 .main-splash{
     background: rgba(241,241,241,1);

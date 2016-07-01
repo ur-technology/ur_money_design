@@ -170,6 +170,13 @@ angular.module('urApp', ['ionic','urApp.controllers','urApp.directives'])
                 controller: 'splashCtrl'
             })
 
+            // splash slide screen
+            .state('URsplash', {
+                url: '/URsplash',
+                templateUrl: 'templates/URsplash.html',
+                controller: 'splashCtrl'
+            })
+
             // about us screen
             .state('aboutUs', {
                 url: "/aboutUs",
